@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Sails App</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/media-queries.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <!--header-->
+        <header class="navbar navbar-default navbar-fixed-top">
+            <nav class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <figure class="content-logo">
+                            <a class="navbar-brand" href="/">Temanis Baru</a>
+                        </figure>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <% if(!session.authenticated) { %>
+                              <li><a class="external" href="/">home</a></li>
+                              <li><a class="nav-button" data-src="features"  href="#features">features</a></li>
+                              <li><a class="nav-button" data-src="classes" href="#classes">classes</a></li>
+                              <li><a class="nav-button" data-src="teachers" href="#teachers">teachers</a></li>
+                              <li><a class="nav-button" data-src="prices" href="#prices">pricing</a></li>
+                              <li><a class="nav-button" data-src="information" href="#information">Info</a></li>
+                              <li><a class="external" href="/register">Sign Up</a></li>
+                              <li><a class="external" href="/login">Sign In</a></li>
+                            <% } else { %>
+                              <li><a class="external" href="/user/dashboard">Apply Grade</a></li>
+                              <li><a class="external" href="/session/signout">Sign Out</a></li>
+                            <% } %>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+            </nav><!-- /.container -->
+        </header>
+        <!--header-->
+    <%- body %>
+    <!--Footer-->
+    <footer>
+
+        <div class="container widget">
+            <div class="row">
+                <div class="about col-sm-6 col-lg-3">
+                    <h3 class="footer-title">About us</h3>
+                    <p>
+                        Morbi dignissim non dolor non placerat. Ut sit amet lectus at neque quis vel imperdiet ullamc orpe. <a href="#">Read more...</a>
+                    </p>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h3 class="footer-title">important links</h3>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="icon-ok-circled2"></i><a href="http://themeforest.net/user/CoralixThemes"> Purchase this template</a>  </li>
+                        <li><i class="icon-ok-circled2"></i> <a href="#">A product for your every  student</a> </li>
+                        <li><i class="icon-ok-circled2"></i> <a href="#">Adjusted to your needs6</a> </li>
+                        <li><i class="icon-ok-circled2"></i> <a href="#">All your classe data in one place</a> </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h3 class="footer-title">Contact information</h3>
+                    <p>Tel: 9892-62156 int 6126</p>
+                    <p>Address: Company City Country</p>
+                    <p>Mail: demo@company.com</p>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h3 class="footer-title">payments</h3>
+                    <p>Make sure you dont miss interesting happenings by joining our newsletter program.</p>
+                    <ul class="pay list-unstyled">
+                        <li><a href="#"><img src="img/visa.png" alt="//"/></a></li>
+                        <li><a href="#"><img src="img/discov.png" alt="//"/></a></li>
+                        <li><a href="#"><img src="img/master.png" alt="//"/></a></li>
+                        <li><a href="#"><img src="img/paypal.png" alt="//"/></a></li>
+                        <li><a href="#"><img src="img/amazon.png" alt="//"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright text-center">
+            <div class="container">
+                <h6 class="col-xs-12 col-lg-6">© 2014 Teacher Landing Template. All rights reserved.</h6>
+                <ul class="list-unstyled col-xs-12 col-lg-6 social">
+                    <li class="tooltip_hover" title="vimeo" data-placement="top"  data-toggle="tooltip"><a href="#"><i class="icon-vimeo"></i></a></li>
+                    <li class="tooltip_hover" title="twitter" data-placement="top"  data-toggle="tooltip"><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li class="tooltip_hover" title="gplus" data-placement="top"  data-toggle="tooltip"><a  href="#" ><i class="icon-gplus"></i></a></li>
+                    <li class="tooltip_hover" title="in" data-placement="top"  data-toggle="tooltip"><a href="#"><i class="icon-linkedin"></i></a></li>
+                    <li class="tooltip_hover" title="play" data-placement="top"  data-toggle="tooltip"><a href="#"><i class="icon-next"></i></a></li>
+                    <li class="tooltip_hover" title="pinterest" data-placement="top"  data-toggle="tooltip"><a href="#"><i class="icon-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <!--Footer-->
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <!--SCRIPTS-->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-func.js"></script>
+    <script src="/js/jquery.fitvids.js"></script>
+    <script src="/js/jquery.nav.js"></script>
+    <script src="/js/jquery.scrollTo.js"></script>
+    <script src="/js/snap.js"></script>
+    <script src="/js/waypoints.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

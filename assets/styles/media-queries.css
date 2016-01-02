@@ -1,0 +1,36 @@
+@media screen and (min-width: 768px) {
+
+    .copyright ul{
+        text-align: right!important;
+    }
+    .copyright h6{
+        text-align: left!important;
+    }
+    .information .info_text{
+        text-align: left!important;
+    }
+    .slider .special_font {
+        font-size: 48px!important;
+    }
+    .special_font {
+        font-size: 36px !important;
+    }
+    .video{
+        background: url("../img/bg_video_lg.png") no-repeat scroll center center transparent !important;
+    }
+    .video .carousel-indicators{
+        left: 45%!important;
+    }
+    
+  .slider .video{
+    background-image: none!important;
+  }  
+}
+
+@media screen and (min-width: 768px) and (max-width : 900px){ 
+    header .navbar-nav > li > a {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+}
